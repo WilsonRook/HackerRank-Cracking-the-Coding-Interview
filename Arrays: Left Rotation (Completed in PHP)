@@ -1,0 +1,16 @@
+<?php
+
+$handle = fopen ("php://stdin","r");
+fscanf($handle,"%d %d",$n,$k);
+$a_temp = fgets($handle);
+$a = explode(" ",$a_temp);
+array_walk($a,'intval');
+
+
+for($i=0;$i<$n;$i++,$k++){
+    echo $a[$k%$n]." ";
+}
+
+
+
+?>
